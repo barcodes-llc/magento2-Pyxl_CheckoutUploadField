@@ -16,10 +16,5 @@
         <strong><?php echo $block->escapeHtml(__('Purchase Order File')) ?></strong>
         <?php echo $block->getPurchaseorderFileLink() ?: __('N/A') ?>
         <br />
-        <strong><?php echo $block->escapeHtml(__('Finance Contact')) ?></strong>
-        <span class="number">
-            <?php echo $block->escapeHtml($this->getInfo()->getAdditionalInformation('po_contact')) ?: __('N/A') ?>
-        </span>
-        <br />
     </dd>
 </dl>

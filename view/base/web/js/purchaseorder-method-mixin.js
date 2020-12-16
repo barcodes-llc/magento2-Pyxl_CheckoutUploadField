@@ -1,7 +1,8 @@
 define([
     'Magento_Checkout/js/view/payment/default',
     'uiLayout',
-], function (Component, layout) {
+    'mage/url',
+], function (Component, layout, url) {
     'use strict';
 
     return function (Component) {
@@ -56,7 +57,7 @@ define([
                     template: 'Pyxl_CheckoutUploadField/uploader',
                     previewTmpl: 'Pyxl_CheckoutUploadField/preview',
                     displayArea: 'uploader',
-                    uploaderConfig: {url: '/uploader/file/index'},
+                    uploaderConfig: {url: url.build('uploader/file/index')},
                     required: true,
                     addFile: function(file) {
                         file = this.processFile(file);
